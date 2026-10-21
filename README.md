@@ -1,12 +1,14 @@
-# Biomaterial performance project site
+# Biomaterial Performance Project
 
-This folder is ready to publish with GitHub Pages. `index.html` is the interactive dashboard; the notebook is linked from the dashboard and can be downloaded from the same folder.
+This repository hosts the interactive dashboard and research notebook for the experimental validation project.
 
-## Publish
+- Live dashboard: available at the GitHub Pages URL shown in **Settings → Pages**.
+- Notebook: [experimental_validation_biomaterial_model.ipynb](experimental_validation_biomaterial_model.ipynb)
 
-1. Create a GitHub repository and upload the contents of this folder to its root.
-2. In the repository, open **Settings → Pages**.
-3. Choose **Deploy from a branch**, select the default branch and `/(root)`, then save.
-4. Open the Pages URL shown in Settings.
+## Run the notebook
 
-The notebook uses a local Mac data path and needs its `DATA_ROOT` updated before it can be run on another computer or in Colab.
+The notebook currently points to the raw-data folder on the original Mac. To run it elsewhere, update `DATA_ROOT` in the notebook to the location of your dataset and install the packages listed in `outputs/requirements.txt` from the project workspace, or install pandas, NumPy, and Matplotlib.
+
+## Deployment
+
+A GitHub Actions workflow deploys the root of this repository to GitHub Pages. In **Settings → Pages**, set the publishing source to **GitHub Actions**. Each push to `main` will then refresh the site.
